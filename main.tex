@@ -1,0 +1,180 @@
+\documentclass[a4paper]{article}
+\usepackage[margin = .9 in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+
+\newcommand{\fakesection}[1]{%
+  \par\refstepcounter{section}% Increase section counter
+  \sectionmark{#1}% Add section mark (header)
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}% Add section to ToC
+  % Add more content here, if needed.
+}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=Dandelion,
+    filecolor=Dandelion,
+    linkcolor=Dandelion,
+    urlcolor=Dandelion
+}
+
+\usepackage{anyfontsize}
+
+\begin{document}
+
+\pagestyle{empty}
+\pagecolor{black}
+\color{white}
+\renewcommand{\contentsname}{}
+
+\begin{tikzpicture}[overlay,remember picture]
+%overlay,remember picture
+\fill[black!100] (current page.south west) rectangle (current page.north east);
+
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(-.5,-6)$)}}]
+
+\shade[rounded corners=18pt, left color=Dandelion, right color=Dandelion!40] ($(current page.north west)+(-.5,-6)$) rectangle ++(9,1.5);
+
+\end{scope}
+
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}]
+
+\shade[rounded corners=18pt, left color=lightgray,right color=lightgray!60] ($(current page.north west)+(0.5,-10)$) rectangle ++(15,1.5);
+
+\end{scope}
+
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(0.5,-10)$)}}]
+
+\shade[rounded corners=8pt, left color=lightgray] ($(current page.north west)+(1.5,-9.55)$) rectangle ++(7,.6);
+
+\end{scope}
+
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north)+(-1.5,-3)$)}}]
+
+\shade[rounded corners=12pt, left color=orange!80, right color=orange!60] ($(current page.north)+(-1.5,-3)$) rectangle ++(9,0.8);
+
+\end{scope}
+
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north)+(-3,-8)$)}}]
+
+\shade[rounded corners=28pt, left color=red!80, right color=red!80] ($(current page.north)+(-3,-8)$) rectangle ++(15,1.8);
+
+\end{scope}
+
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(4,-15.5)$)}}]
+
+\shade[rounded corners=25pt, left color=orange, right color=Dandelion] ($(current page.north west)+(4,-15.5)$) rectangle ++(30,1.8);
+
+\end{scope}
+
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(13,-10)$)}},]
+
+\shade[rounded corners=22pt, left color=RoyalBlue,right color=Emerald] ($(current page.north west)+(13,-10)$) rectangle ++(15,1.5);
+
+\end{scope}
+
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(18,-8)$)}},]
+
+\shade[rounded corners=8pt, left color=lightgray] ($(current page.north west)+(18,-8)$) rectangle ++(15,0.6);
+
+\end{scope}
+
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(19,-5.65)$)}},]
+
+\shade[rounded corners=12pt, left color=lightgray] ($(current page.north west)+(19,-5.65)$) rectangle ++(15,0.8);
+
+\end{scope}
+
+\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(20,-9)$)}}]
+
+\shade[rounded corners=20pt, left color=OrangeRed, right color=red!80] ($(current page.north west)+(20,-9)$) rectangle ++(14,1.2);
+
+\end{scope}
+
+\draw[ultra thick,gray] ($(current page.center)+(5,3.5)$) -- ++(0,-3cm) node[midway,left=0.25cm,text width=5cm,align=right,black!2]{{\fontsize{25}{30} \selectfont \bf EESA PROJECT \\[10pt] REPORT}};
+
+
+
+\node at ($(current page.center)+(0,-2.3)$) {{\bf\fontsize{34}{72} \selectfont ML \& AI in Power Systems }};
+
+\node[text width=20cm,align=center] at ($(current page.center)+(0,-4.6)$) {{\fontsize{25}{70.2} \selectfont{ \bf Electrical Engineering Department}}};
+
+\node[text width=10cm,align=center] at ($(current page.center)+(3.5,-6.6)$) {{\fontsize{18}{19.2} \selectfont \textcolor{RoyalBlue!60}{ \bf Seyed Mohammad Sajadi}}};
+
+\node[text width=10cm,align=center] at ($(current page.center)+(-2,-6.6)$) {{\fontsize{18}{19.2} \selectfont \textcolor{RoyalBlue}{ \bf \&}}};
+
+\node[text width=10cm,align=center] at ($(current page.center)+(-5.8,-6.6)$) {{\fontsize{18}{19.2} \selectfont \textcolor{RoyalBlue!60}{ \bf Ali Jafari}}};
+
+\node[text width=10cm,align=center] at ($(current page.center)+(7.6,2)$) {{\includegraphics[width= 3cm]{shariflogo} }};
+
+
+% \node[text width=10cm,align=center] at ($(current page.center)+(0,-13.2)$) {{\fontsize{15}{19.2} \selectfont { \bf January 2022 }}};
+\end{tikzpicture}
+
+\begin{tikzpicture}[overlay,remember picture]
+\node[text width=0cm,align=center] at ($(current page.center)+(-10.6,-12.83)$) {{\includegraphics[width= 18cm]{bottom} }};
+\end{tikzpicture}
+
+\newpage
+
+\begin{tikzpicture}[remember picture,overlay]
+\node[text width=0cm,align=center] at ($(current page.center)+(-7.6,13)$) {{\includegraphics[width= 18cm]{top} }};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\shade[rounded corners=3pt, left color=Dandelion, right color=Dandelion] ($(current page.north east)+(0,13)$) rectangle ++(-24.5,.2);
+\shade[rounded corners=3pt, left color=Dandelion, right color=Dandelion] ($(current page.north east)+(0,10)$) rectangle ++(-30,.2);
+\end{tikzpicture}
+
+\begin{tikzpicture}[overlay,remember picture]
+\node[text width=20cm,align=center] at ($(current page.center)+(5,10.65)$) {{\bf\fontsize{35}{19.2} \selectfont Contents}};
+\end{tikzpicture}
+
+{\Large\tableofcontents}
+\begin{tikzpicture}[overlay,remember picture]
+\node[text width=0cm,align=center] at ($(current page.center)+(-10.6,-12.83)$) {{\includegraphics[width= 18cm]{bottom} }};
+\end{tikzpicture}
+\newpage
+\begin{tikzpicture}[remember picture,overlay]
+\node[text width=0cm,align=center] at ($(current page.center)+(-7.6,13)$) {{\includegraphics[width= 18cm]{top} }};
+\end{tikzpicture}
+\fakesection{Preface}
+
+\begin{tikzpicture}
+\shade[rounded corners=3pt, left color=RoyalBlue, right color=RoyalBlue] ($(current page.north east)+(0,13)$) rectangle ++(-24.5,.2);
+\shade[rounded corners=3pt, left color=RoyalBlue, right color=RoyalBlue] ($(current page.north east)+(0,10)$) rectangle ++(-30,.2);
+\end{tikzpicture}
+\begin{tikzpicture}[overlay,remember picture]
+\node[text width=20cm,align=center] at ($(current page.center)+(5,10.65)$) {{\bf\fontsize{35}{19.2} \selectfont Preface}};
+\end{tikzpicture}
+
+\vspace{1.3cm}
+\setstretch{1.4}
+\Large
+\noindent As the machine-learning industry evolves, the focus has expanded from\\merely solving
+the problem to solving the problem better.
+
+\noindent“Better” often has meant accuracy or speed, but as data center energy budgets explode and machine learning moves to the edge, energy consumption has taken its place alongside accuracy and speed as a critical issue. There are a number of approaches to neural networks that allow for reductions in energy consumption.\\
+
+\noindent “{\bf Everybody’s looking for alternate ways of implementing neural networks that are going to be much lower power,}” said Elias Fallon, software engineering group director, custom IC \& PCB group at Cadence.\\
+
+\noindent “{\bf Google itself is worried about the power during the creation and training of the neural net,}” said Venki Venkatesh, director of R\&D, AI \& ML solutions, digital design group at Synopsys.\\
+
+\noindent All these explains  
+
+\begin{tikzpicture}[remember picture,overlay]
+
+\node[text width=0cm,align=center] at ($(current page.center)+(-10.6,-12.83)$) {{\includegraphics[width= 18cm]{bottom} }};
+\end{tikzpicture}
+
+\newpage
+\section{test1 Section}
+\newpage
+
+\end{document}
